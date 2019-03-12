@@ -23,10 +23,16 @@ class InfiniteRoll {
         
         this.scrollWrapper = document.createElement("div");
         this.scrollWrapper.classList.add("infiniteRollWrapper");
+        
         this.scrollRail = document.createElement("div");
         this.scrollRail.classList.add("infiniteRollRail");
+        this.scrollRail.style.display = "flex";
+        this.scrollRail.style.whiteSpace = "nowrap";
+        this.scrollRail.style.willChange = "transform";
+
         this.scrollItem = document.createElement("div");
         this.scrollItem.classList.add("infiniteRollItem");
+        this.scrollItem.style.flex = "0 0 auto";
         this.scrollItem.appendChild(this.elementContent);
 
         this.scrollRail.appendChild(this.scrollItem);
